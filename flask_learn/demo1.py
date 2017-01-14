@@ -3,8 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    abort(400)
-    return 'Hello World!'
+    return ""
 
 @app.errorhandler(400)
 def error_400(obj):
