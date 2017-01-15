@@ -1,3 +1,5 @@
 .idea
 venv
+app.db
+db_repository
 *.pyc
