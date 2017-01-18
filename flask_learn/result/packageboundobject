@@ -1,0 +1,12 @@
+1. get_root_path : 
+    a. sys.modules.get -> dirname
+    b. pkgutil -> 没有加载的moudle重新导入
+    c. 如果moudle不存在， 判断是否为__main__. getcwd（）
+    d. 从压缩包导入模块 ？
+
+2. 使用property() 设置属性,并删除属性方法
+3.locked_cached_property ：每个Flask实例的复用同一个FileSystemLoader,将属性值进行缓存
+4. send_static_file :
+    if not self.has_static_folder:
+        raise RuntimeError('No static folder for this object')
+5. open_resource :  rootpath下访问文件, 没什么大意思
