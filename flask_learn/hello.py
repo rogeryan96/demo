@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import request
+from flask import request,abort
 from flask import render_template
 
 app = Flask(__name__)
@@ -23,9 +23,13 @@ def show_post(post_id):
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
-        return 'do the login'
+        print request.get_json(force=True)
+        print request.blueprint
+        print request.endpoint
+        print request.max_content_length
+        return ""
     else:
         return 'show the login form'
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
